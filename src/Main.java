@@ -1,21 +1,36 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int studentAge = 10;
-        double studentGPA = 3.43;
+        //Fortune teller
+        int inputtedNumber;
 
-        boolean hasPerfectAttendance = true;
-        String studentFirstName = "Kee";
-        String studentLastName = "Woon";
+        System.out.println("Pick a number between 1 and 10 ");
 
-        char studentFirstInitial = studentFirstName.charAt(0);
-        char studentLastInitial = studentLastName.charAt(0);
+        Scanner input = new Scanner(System.in);
+        inputtedNumber = input.nextInt();
 
-        System.out.println(studentAge);
-        System.out.println(studentGPA);
-        System.out.println(studentFirstInitial);
-        System.out.println(studentLastInitial);
-        System.out.println(hasPerfectAttendance);
-        System.out.println(studentFirstName);
-        System.out.println(studentLastName);
+        if (inputtedNumber < 5){
+            System.out.println("Enjoy the good fortune a friend brings you");
+        }else {
+            System.out.println("Your shoe selection will make you happy today");
+        }
+
+        //While loop
+
+        Scanner secondInput = new Scanner(System.in);
+        boolean isOnRepeat = true;
+
+        while (isOnRepeat){
+            System.out.println("Playing current song!");
+            System.out.println("Do you want to move to next song? Answer yes or no");
+            String userInput = input.next();
+
+            if (userInput.equals("yes")){
+                isOnRepeat = false;
+            }
+
+        }
+        System.out.println("Playing next song");
     }
 }
